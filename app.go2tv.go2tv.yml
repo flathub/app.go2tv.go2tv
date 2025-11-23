@@ -1,13 +1,13 @@
 app-id: app.go2tv.go2tv
 runtime: org.freedesktop.Platform
-runtime-version: &runtime-version "24.08"
+runtime-version: &runtime-version "25.08"
 sdk: org.freedesktop.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.golang
 
 add-extensions:
   org.freedesktop.Platform.ffmpeg-full:
-    version: '24.08'
+    version: '25.08'
     directory: lib/ffmpeg
     add-ld-path: .
 
@@ -18,7 +18,6 @@ finish-args:
   - --share=network
   - --socket=x11
   - --device=dri
-  - --filesystem=host
 
 build-options:
   env:
@@ -29,7 +28,7 @@ modules:
   - name: go2tv
     buildsystem: simple
     build-commands:
-      - $GOROOT/bin/go build -trimpath -ldflags="-s -w" -o go2tv cmd/go2tv/go2tv.go
+      - $GOROOT/bin/go build -tags "migrated_fynedo flatpak" -trimpath -ldflags="-s -w" -o go2tv cmd/go2tv/go2tv.go
       - install -Dm00755 go2tv $FLATPAK_DEST/bin/go2tv
       - install -Dm00644 assets/linux/$FLATPAK_ID.desktop $FLATPAK_DEST/share/applications/$FLATPAK_ID.desktop
       - install -Dm00644 assets/linux/$FLATPAK_ID.appdata.xml $FLATPAK_DEST/share/appdata/$FLATPAK_ID.appdata.xml
@@ -38,5 +37,5 @@ modules:
     sources:
       - type: git
         url: "https://github.com/alexballas/go2tv"
-        commit: c705b637148c082fae03398db58263611aee22b6
+        commit: b416b3d8c7ca7635837c65fa2e63e1acad199a64
       - go.mod.yml
