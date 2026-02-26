@@ -18,6 +18,9 @@ finish-args:
   - --share=network
   - --socket=x11
   - --device=dri
+  - --filesystem=xdg-music:ro
+  - --filesystem=xdg-videos:ro
+  - --filesystem=xdg-download:ro
 
 build-options:
   env:
@@ -28,7 +31,7 @@ modules:
   - name: go2tv
     buildsystem: simple
     build-commands:
-      - $GOROOT/bin/go build -tags "migrated_fynedo flatpak" -trimpath -ldflags="-s -w" -o go2tv cmd/go2tv/go2tv.go
+      - $GOROOT/bin/go build -tags "migrated_fynedo flatpak" -trimpath -ldflags="-s -w -X main.version=$(cat version.txt)" -o go2tv cmd/go2tv/go2tv.go
       - install -Dm00755 go2tv $FLATPAK_DEST/bin/go2tv
       - install -Dm00644 assets/linux/$FLATPAK_ID.desktop $FLATPAK_DEST/share/applications/$FLATPAK_ID.desktop
       - install -Dm00644 assets/linux/$FLATPAK_ID.appdata.xml $FLATPAK_DEST/share/appdata/$FLATPAK_ID.appdata.xml
@@ -37,5 +40,5 @@ modules:
     sources:
       - type: git
         url: "https://github.com/alexballas/go2tv"
-        commit: b416b3d8c7ca7635837c65fa2e63e1acad199a64
+        commit: eb3115a6380ae2ec8f5b6007cf6c944fc27cab0b
       - go.mod.yml
