@@ -344,7 +344,7 @@ github.com/yuin/goldmark/renderer
 github.com/yuin/goldmark/renderer/html
 github.com/yuin/goldmark/text
 github.com/yuin/goldmark/util
-# go2tv.app/screencast v0.0.0-20260306000104-3bb195be4e79
+# go2tv.app/screencast v0.0.0-20260320222909-962c66128533
 ## explicit; go 1.25
 go2tv.app/screencast/capture
 go2tv.app/screencast/hls
