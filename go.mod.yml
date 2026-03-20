@@ -103,10 +103,10 @@
   type: archive
   url: https://proxy.golang.org/github.com/stretchr/testify/@v/v1.11.1.zip
 - dest: vendor/go2tv.app/screencast
-  sha256: 0d3000463c0180a7925742c295d97b54abd9e46301b673e94dafc4effa911d58
+  sha256: 4d3a46703728cc239635c21038c2d00396125d414a5a223c51b1ec910b9fe9ef
   strip-components: 2
   type: archive
-  url: https://proxy.golang.org/go2tv.app/screencast/@v/v0.0.0-20260306000104-3bb195be4e79.zip
+  url: https://proxy.golang.org/go2tv.app/screencast/@v/v0.0.0-20260320222909-962c66128533.zip
 - dest: vendor/golang.org/x/mod
   sha256: a5a4c8a9f6700712216df6bc4bc45544494736b5383aebb784fdb2dd0f41f36b
   strip-components: 3
