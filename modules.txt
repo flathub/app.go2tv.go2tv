@@ -1,4 +1,4 @@
-# fyne.io/fyne/v2 v2.7.3-0.20260131162633-80f2081b7904 => github.com/alexballas/fyne/v2 v2.3.3-0.20260214003640-c68aed308565
+# fyne.io/fyne/v2 v2.7.3 => github.com/alexballas/fyne/v2 v2.3.3-0.20260214003640-c68aed308565
 ## explicit; go 1.19
 fyne.io/fyne/v2
 fyne.io/fyne/v2/app
@@ -79,7 +79,7 @@ github.com/buger/jsonparser
 # github.com/charmbracelet/bubbletea v1.3.10
 ## explicit; go 1.24.0
 github.com/charmbracelet/bubbletea
-# github.com/charmbracelet/colorprofile v0.4.1
+# github.com/charmbracelet/colorprofile v0.4.2
 ## explicit; go 1.24.2
 github.com/charmbracelet/colorprofile
 # github.com/charmbracelet/lipgloss v1.1.0
@@ -95,18 +95,21 @@ github.com/charmbracelet/x/cellbuf
 # github.com/charmbracelet/x/term v0.2.2
 ## explicit; go 1.24.0
 github.com/charmbracelet/x/term
-# github.com/clipperhouse/displaywidth v0.9.0
+# github.com/clipperhouse/displaywidth v0.11.0
 ## explicit; go 1.18
 github.com/clipperhouse/displaywidth
-# github.com/clipperhouse/stringish v0.1.1
-## explicit; go 1.18
-github.com/clipperhouse/stringish
-# github.com/clipperhouse/uax29/v2 v2.5.0
+# github.com/clipperhouse/uax29/v2 v2.7.0
 ## explicit; go 1.18
 github.com/clipperhouse/uax29/v2/graphemes
 # github.com/davecgh/go-spew v1.1.1
 ## explicit
 github.com/davecgh/go-spew/spew
+# github.com/dweymouth/fyne-tooltip v0.4.0
+## explicit; go 1.21
+github.com/dweymouth/fyne-tooltip
+github.com/dweymouth/fyne-tooltip/internal
+github.com/dweymouth/fyne-tooltip/internal/shadow
+github.com/dweymouth/fyne-tooltip/widget
 # github.com/erikgeiser/coninput v0.0.0-20211004153227-1c3628e74d0f
 ## explicit; go 1.16
 github.com/erikgeiser/coninput
@@ -181,10 +184,10 @@ github.com/go-gl/glfw/v3.3/glfw/glfw/deps/mingw
 github.com/go-gl/glfw/v3.3/glfw/glfw/deps/vs2008
 github.com/go-gl/glfw/v3.3/glfw/glfw/include/GLFW
 github.com/go-gl/glfw/v3.3/glfw/glfw/src
-# github.com/go-text/render v0.2.0
-## explicit; go 1.17
+# github.com/go-text/render v0.2.1
+## explicit; go 1.19
 github.com/go-text/render
-# github.com/go-text/typesetting v0.3.3
+# github.com/go-text/typesetting v0.3.4
 ## explicit; go 1.19
 github.com/go-text/typesetting/di
 github.com/go-text/typesetting/font
@@ -194,10 +197,10 @@ github.com/go-text/typesetting/font/opentype
 github.com/go-text/typesetting/font/opentype/tables
 github.com/go-text/typesetting/fontscan
 github.com/go-text/typesetting/harfbuzz
+github.com/go-text/typesetting/internal/unicodedata
 github.com/go-text/typesetting/language
 github.com/go-text/typesetting/segmenter
 github.com/go-text/typesetting/shaping
-github.com/go-text/typesetting/unicodedata
 # github.com/go-viper/mapstructure/v2 v2.5.0
 ## explicit; go 1.18
 github.com/go-viper/mapstructure/v2
@@ -252,7 +255,7 @@ github.com/mattn/go-isatty
 # github.com/mattn/go-localereader v0.0.1
 ## explicit
 github.com/mattn/go-localereader
-# github.com/mattn/go-runewidth v0.0.19
+# github.com/mattn/go-runewidth v0.0.20
 ## explicit; go 1.20
 github.com/mattn/go-runewidth
 # github.com/miekg/dns v1.1.72
@@ -320,18 +323,15 @@ github.com/srwiley/oksvg
 # github.com/srwiley/rasterx v0.0.0-20220730225603-2ab79fcdd4ef
 ## explicit; go 1.17
 github.com/srwiley/rasterx
+# github.com/stretchr/objx v0.5.3
+## explicit; go 1.20
+github.com/stretchr/objx
 # github.com/stretchr/testify v1.11.1
 ## explicit; go 1.17
 github.com/stretchr/testify/assert
 github.com/stretchr/testify/assert/yaml
+github.com/stretchr/testify/mock
 github.com/stretchr/testify/require
-# github.com/vishen/go-chromecast v0.3.4
-## explicit; go 1.23.2
-github.com/vishen/go-chromecast/application
-github.com/vishen/go-chromecast/cast
-github.com/vishen/go-chromecast/cast/proto
-github.com/vishen/go-chromecast/playlists
-github.com/vishen/go-chromecast/storage
 # github.com/xo/terminfo v0.0.0-20220910002029-abceb7e1c41e
 ## explicit; go 1.19
 github.com/xo/terminfo
@@ -344,7 +344,18 @@ github.com/yuin/goldmark/renderer
 github.com/yuin/goldmark/renderer/html
 github.com/yuin/goldmark/text
 github.com/yuin/goldmark/util
-# golang.org/x/image v0.35.0
+# go2tv.app/screencast v0.0.0-20260306000104-3bb195be4e79
+## explicit; go 1.25
+go2tv.app/screencast/capture
+go2tv.app/screencast/hls
+go2tv.app/screencast/internal/apis
+go2tv.app/screencast/internal/convert
+go2tv.app/screencast/internal/pipewire
+go2tv.app/screencast/internal/processutil
+go2tv.app/screencast/internal/request
+go2tv.app/screencast/internal/session
+go2tv.app/screencast/internal/xdgportal
+# golang.org/x/image v0.36.0
 ## explicit; go 1.24.0
 golang.org/x/image/ccitt
 golang.org/x/image/colornames
@@ -354,11 +365,11 @@ golang.org/x/image/math/fixed
 golang.org/x/image/tiff
 golang.org/x/image/tiff/lzw
 golang.org/x/image/vector
-# golang.org/x/mod v0.32.0
+# golang.org/x/mod v0.33.0
 ## explicit; go 1.24.0
 golang.org/x/mod/semver
-# golang.org/x/net v0.50.0
-## explicit; go 1.24.0
+# golang.org/x/net v0.51.0
+## explicit; go 1.25.0
 golang.org/x/net/bpf
 golang.org/x/net/html
 golang.org/x/net/html/atom
@@ -402,7 +413,7 @@ golang.org/x/text/unicode/bidi
 # golang.org/x/time v0.14.0
 ## explicit; go 1.24.0
 golang.org/x/time/rate
-# golang.org/x/tools v0.41.0
+# golang.org/x/tools v0.42.0
 ## explicit; go 1.24.0
 golang.org/x/tools/go/ast/edge
 golang.org/x/tools/go/ast/inspector
