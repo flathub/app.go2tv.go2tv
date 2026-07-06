@@ -1,56 +1,4 @@
-# fyne.io/fyne/v2 v2.7.3 => github.com/alexballas/fyne/v2 v2.3.3-0.20260214003640-c68aed308565
-## explicit; go 1.19
-fyne.io/fyne/v2
-fyne.io/fyne/v2/app
-fyne.io/fyne/v2/canvas
-fyne.io/fyne/v2/container
-fyne.io/fyne/v2/data/binding
-fyne.io/fyne/v2/dialog
-fyne.io/fyne/v2/driver
-fyne.io/fyne/v2/driver/desktop
-fyne.io/fyne/v2/driver/embedded
-fyne.io/fyne/v2/driver/mobile
-fyne.io/fyne/v2/driver/software
-fyne.io/fyne/v2/internal
-fyne.io/fyne/v2/internal/animation
-fyne.io/fyne/v2/internal/app
-fyne.io/fyne/v2/internal/async
-fyne.io/fyne/v2/internal/build
-fyne.io/fyne/v2/internal/cache
-fyne.io/fyne/v2/internal/color
-fyne.io/fyne/v2/internal/driver
-fyne.io/fyne/v2/internal/driver/common
-fyne.io/fyne/v2/internal/driver/embedded
-fyne.io/fyne/v2/internal/driver/glfw
-fyne.io/fyne/v2/internal/driver/mobile
-fyne.io/fyne/v2/internal/driver/mobile/app
-fyne.io/fyne/v2/internal/driver/mobile/app/callfn
-fyne.io/fyne/v2/internal/driver/mobile/event/key
-fyne.io/fyne/v2/internal/driver/mobile/event/lifecycle
-fyne.io/fyne/v2/internal/driver/mobile/event/paint
-fyne.io/fyne/v2/internal/driver/mobile/event/size
-fyne.io/fyne/v2/internal/driver/mobile/event/touch
-fyne.io/fyne/v2/internal/driver/mobile/gl
-fyne.io/fyne/v2/internal/driver/mobile/mobileinit
-fyne.io/fyne/v2/internal/metadata
-fyne.io/fyne/v2/internal/painter
-fyne.io/fyne/v2/internal/painter/gl
-fyne.io/fyne/v2/internal/painter/software
-fyne.io/fyne/v2/internal/repository
-fyne.io/fyne/v2/internal/repository/mime
-fyne.io/fyne/v2/internal/scale
-fyne.io/fyne/v2/internal/svg
-fyne.io/fyne/v2/internal/test
-fyne.io/fyne/v2/internal/theme
-fyne.io/fyne/v2/internal/widget
-fyne.io/fyne/v2/lang
-fyne.io/fyne/v2/layout
-fyne.io/fyne/v2/storage
-fyne.io/fyne/v2/storage/repository
-fyne.io/fyne/v2/test
-fyne.io/fyne/v2/theme
-fyne.io/fyne/v2/widget
-# fyne.io/systray v1.12.0
+# fyne.io/systray v1.12.2
 ## explicit; go 1.19
 fyne.io/systray
 fyne.io/systray/internal/generated/menu
@@ -59,21 +7,92 @@ fyne.io/systray/internal/generated/notifier
 ## explicit; go 1.18
 github.com/BurntSushi/toml
 github.com/BurntSushi/toml/internal
-# github.com/FyshOS/fancyfs v0.0.1
-## explicit; go 1.19
-github.com/FyshOS/fancyfs
-# github.com/alexballas/go-ssdp v0.0.3
-## explicit; go 1.19
+# github.com/alexballas/fyne-tooltip v0.0.0-20260528093432-da161b5c8cac
+## explicit; go 1.21
+github.com/alexballas/fyne-tooltip
+github.com/alexballas/fyne-tooltip/internal
+github.com/alexballas/fyne-tooltip/internal/shadow
+github.com/alexballas/fyne-tooltip/widget
+# github.com/alexballas/go-ssdp v0.0.4-0.20260524181453-a1b7428979ab
+## explicit; go 1.25.0
 github.com/alexballas/go-ssdp
 github.com/alexballas/go-ssdp/internal/multicast
 github.com/alexballas/go-ssdp/internal/ssdplog
-# github.com/alexballas/xfilepicker v0.0.0-20260427220638-78f6865a771e
-## explicit; go 1.25
+# github.com/alexballas/refyne/v2 v2.0.0-20260704215238-cd0c81ab94a5
+## explicit; go 1.19
+github.com/alexballas/refyne/v2
+github.com/alexballas/refyne/v2/app
+github.com/alexballas/refyne/v2/canvas
+github.com/alexballas/refyne/v2/container
+github.com/alexballas/refyne/v2/data/binding
+github.com/alexballas/refyne/v2/dialog
+github.com/alexballas/refyne/v2/driver
+github.com/alexballas/refyne/v2/driver/desktop
+github.com/alexballas/refyne/v2/driver/embedded
+github.com/alexballas/refyne/v2/driver/mobile
+github.com/alexballas/refyne/v2/driver/software
+github.com/alexballas/refyne/v2/fancyfs
+github.com/alexballas/refyne/v2/internal
+github.com/alexballas/refyne/v2/internal/animation
+github.com/alexballas/refyne/v2/internal/app
+github.com/alexballas/refyne/v2/internal/async
+github.com/alexballas/refyne/v2/internal/build
+github.com/alexballas/refyne/v2/internal/cache
+github.com/alexballas/refyne/v2/internal/color
+github.com/alexballas/refyne/v2/internal/driver
+github.com/alexballas/refyne/v2/internal/driver/common
+github.com/alexballas/refyne/v2/internal/driver/embedded
+github.com/alexballas/refyne/v2/internal/driver/glfw
+github.com/alexballas/refyne/v2/internal/driver/mobile
+github.com/alexballas/refyne/v2/internal/driver/mobile/app
+github.com/alexballas/refyne/v2/internal/driver/mobile/app/callfn
+github.com/alexballas/refyne/v2/internal/driver/mobile/event/key
+github.com/alexballas/refyne/v2/internal/driver/mobile/event/lifecycle
+github.com/alexballas/refyne/v2/internal/driver/mobile/event/paint
+github.com/alexballas/refyne/v2/internal/driver/mobile/event/size
+github.com/alexballas/refyne/v2/internal/driver/mobile/event/touch
+github.com/alexballas/refyne/v2/internal/driver/mobile/gl
+github.com/alexballas/refyne/v2/internal/driver/mobile/mobileinit
+github.com/alexballas/refyne/v2/internal/glfw
+github.com/alexballas/refyne/v2/internal/glfw/glfw/deps
+github.com/alexballas/refyne/v2/internal/glfw/glfw/deps/glad
+github.com/alexballas/refyne/v2/internal/glfw/glfw/deps/mingw
+github.com/alexballas/refyne/v2/internal/glfw/glfw/deps/wayland
+github.com/alexballas/refyne/v2/internal/glfw/glfw/include
+github.com/alexballas/refyne/v2/internal/glfw/glfw/include/GLFW
+github.com/alexballas/refyne/v2/internal/glfw/glfw/src
+github.com/alexballas/refyne/v2/internal/metadata
+github.com/alexballas/refyne/v2/internal/painter
+github.com/alexballas/refyne/v2/internal/painter/gl
+github.com/alexballas/refyne/v2/internal/painter/software
+github.com/alexballas/refyne/v2/internal/repository
+github.com/alexballas/refyne/v2/internal/repository/mime
+github.com/alexballas/refyne/v2/internal/scale
+github.com/alexballas/refyne/v2/internal/scheduler
+github.com/alexballas/refyne/v2/internal/svg
+github.com/alexballas/refyne/v2/internal/test
+github.com/alexballas/refyne/v2/internal/theme
+github.com/alexballas/refyne/v2/internal/widget
+github.com/alexballas/refyne/v2/lang
+github.com/alexballas/refyne/v2/layout
+github.com/alexballas/refyne/v2/storage
+github.com/alexballas/refyne/v2/storage/repository
+github.com/alexballas/refyne/v2/test
+github.com/alexballas/refyne/v2/theme
+github.com/alexballas/refyne/v2/widget
+# github.com/alexballas/xfilepicker v0.0.0-20260615164249-3b661a1044b9
+## explicit; go 1.25.0
 github.com/alexballas/xfilepicker/dialog
+# github.com/anthonynsimon/bild v0.16.0
+## explicit; go 1.26
+github.com/anthonynsimon/bild/blur
+github.com/anthonynsimon/bild/clone
+github.com/anthonynsimon/bild/convolution
+github.com/anthonynsimon/bild/parallel
 # github.com/aymanbagabas/go-osc52/v2 v2.0.1
 ## explicit; go 1.16
 github.com/aymanbagabas/go-osc52/v2
-# github.com/buger/jsonparser v1.1.2
+# github.com/buger/jsonparser v1.2.0
 ## explicit; go 1.13
 github.com/buger/jsonparser
 # github.com/charmbracelet/bubbletea v1.3.10
@@ -104,26 +123,20 @@ github.com/clipperhouse/uax29/v2/graphemes
 # github.com/davecgh/go-spew v1.1.1
 ## explicit
 github.com/davecgh/go-spew/spew
-# github.com/dweymouth/fyne-tooltip v0.4.0
-## explicit; go 1.21
-github.com/dweymouth/fyne-tooltip
-github.com/dweymouth/fyne-tooltip/internal
-github.com/dweymouth/fyne-tooltip/internal/shadow
-github.com/dweymouth/fyne-tooltip/widget
 # github.com/erikgeiser/coninput v0.0.0-20211004153227-1c3628e74d0f
 ## explicit; go 1.16
 github.com/erikgeiser/coninput
 # github.com/fredbi/uri v1.1.1
 ## explicit; go 1.19
 github.com/fredbi/uri
-# github.com/fsnotify/fsnotify v1.9.0
-## explicit; go 1.17
+# github.com/fsnotify/fsnotify v1.10.1
+## explicit; go 1.23
 github.com/fsnotify/fsnotify
 github.com/fsnotify/fsnotify/internal
-# github.com/fyne-io/gl-js v0.2.0
+# github.com/fyne-io/gl-js v0.2.1-0.20260315212741-029c47fd27e8
 ## explicit; go 1.19
 github.com/fyne-io/gl-js
-# github.com/fyne-io/glfw-js v0.3.0
+# github.com/fyne-io/glfw-js v0.4.0
 ## explicit; go 1.19
 github.com/fyne-io/glfw-js
 # github.com/fyne-io/image v0.1.1
@@ -135,7 +148,7 @@ github.com/fyne-io/oksvg
 # github.com/gdamore/encoding v1.0.1
 ## explicit; go 1.9
 github.com/gdamore/encoding
-# github.com/gdamore/tcell/v2 v2.13.9
+# github.com/gdamore/tcell/v2 v2.13.10
 ## explicit; go 1.24.0
 github.com/gdamore/tcell/v2
 github.com/gdamore/tcell/v2/terminfo
@@ -175,15 +188,15 @@ github.com/go-gl/gl/v2.1/gl
 github.com/go-gl/gl/v2.1/gl/KHR
 github.com/go-gl/gl/v3.1/gles2
 github.com/go-gl/gl/v3.1/gles2/KHR
-# github.com/go-gl/glfw/v3.3/glfw v0.0.0-20260406072232-3ac4aa2bb164
+# github.com/go-gl/glfw/v3.4/glfw v0.1.0-pre.1
 ## explicit; go 1.19
-github.com/go-gl/glfw/v3.3/glfw
-github.com/go-gl/glfw/v3.3/glfw/glfw/deps
-github.com/go-gl/glfw/v3.3/glfw/glfw/deps/glad
-github.com/go-gl/glfw/v3.3/glfw/glfw/deps/mingw
-github.com/go-gl/glfw/v3.3/glfw/glfw/deps/vs2008
-github.com/go-gl/glfw/v3.3/glfw/glfw/include/GLFW
-github.com/go-gl/glfw/v3.3/glfw/glfw/src
+github.com/go-gl/glfw/v3.4/glfw
+github.com/go-gl/glfw/v3.4/glfw/glfw/deps
+github.com/go-gl/glfw/v3.4/glfw/glfw/deps/glad
+github.com/go-gl/glfw/v3.4/glfw/glfw/deps/mingw
+github.com/go-gl/glfw/v3.4/glfw/glfw/deps/wayland
+github.com/go-gl/glfw/v3.4/glfw/glfw/include/GLFW
+github.com/go-gl/glfw/v3.4/glfw/glfw/src
 # github.com/go-text/render v0.2.1
 ## explicit; go 1.19
 github.com/go-text/render
@@ -234,8 +247,8 @@ github.com/hashicorp/go-cleanhttp
 # github.com/hashicorp/go-retryablehttp v0.7.8
 ## explicit; go 1.23
 github.com/hashicorp/go-retryablehttp
-# github.com/hashicorp/mdns v1.0.6
-## explicit; go 1.13
+# github.com/hashicorp/mdns v1.0.7
+## explicit; go 1.25
 github.com/hashicorp/mdns
 # github.com/jeandeaual/go-locale v0.0.0-20250612000132-0ef82f21eade
 ## explicit; go 1.18
@@ -248,14 +261,13 @@ github.com/jsummers/gobmp
 github.com/lucasb-eyer/go-colorful
 # github.com/mattn/go-colorable v0.1.14
 ## explicit; go 1.18
-github.com/mattn/go-colorable
 # github.com/mattn/go-isatty v0.0.22
 ## explicit; go 1.21
 github.com/mattn/go-isatty
 # github.com/mattn/go-localereader v0.0.1
 ## explicit
 github.com/mattn/go-localereader
-# github.com/mattn/go-runewidth v0.0.23
+# github.com/mattn/go-runewidth v0.0.24
 ## explicit; go 1.20
 github.com/mattn/go-runewidth
 # github.com/miekg/dns v1.1.72
@@ -292,11 +304,6 @@ github.com/pmezard/go-difflib/difflib
 # github.com/rivo/uniseg v0.4.7
 ## explicit; go 1.18
 github.com/rivo/uniseg
-# github.com/rs/zerolog v1.35.1
-## explicit; go 1.23
-github.com/rs/zerolog
-github.com/rs/zerolog/internal/cbor
-github.com/rs/zerolog/internal/json
 # github.com/rymdport/portal v0.4.2
 ## explicit; go 1.19
 github.com/rymdport/portal
@@ -339,6 +346,8 @@ github.com/xo/terminfo
 ## explicit; go 1.22
 github.com/yuin/goldmark
 github.com/yuin/goldmark/ast
+github.com/yuin/goldmark/extension
+github.com/yuin/goldmark/extension/ast
 github.com/yuin/goldmark/parser
 github.com/yuin/goldmark/renderer
 github.com/yuin/goldmark/renderer/html
@@ -355,20 +364,21 @@ go2tv.app/screencast/internal/processutil
 go2tv.app/screencast/internal/request
 go2tv.app/screencast/internal/session
 go2tv.app/screencast/internal/xdgportal
-# golang.org/x/image v0.39.0
+# golang.org/x/image v0.43.0
 ## explicit; go 1.25.0
 golang.org/x/image/ccitt
 golang.org/x/image/colornames
 golang.org/x/image/draw
+golang.org/x/image/internal/safemath
 golang.org/x/image/math/f64
 golang.org/x/image/math/fixed
 golang.org/x/image/tiff
 golang.org/x/image/tiff/lzw
 golang.org/x/image/vector
-# golang.org/x/mod v0.35.0
+# golang.org/x/mod v0.37.0
 ## explicit; go 1.25.0
 golang.org/x/mod/semver
-# golang.org/x/net v0.53.0
+# golang.org/x/net v0.56.0
 ## explicit; go 1.25.0
 golang.org/x/net/bpf
 golang.org/x/net/html
@@ -378,19 +388,19 @@ golang.org/x/net/internal/iana
 golang.org/x/net/internal/socket
 golang.org/x/net/ipv4
 golang.org/x/net/ipv6
-# golang.org/x/sync v0.20.0
+# golang.org/x/sync v0.21.0
 ## explicit; go 1.25.0
 golang.org/x/sync/errgroup
-# golang.org/x/sys v0.43.0
+# golang.org/x/sys v0.46.0
 ## explicit; go 1.25.0
 golang.org/x/sys/plan9
 golang.org/x/sys/unix
 golang.org/x/sys/windows
 golang.org/x/sys/windows/registry
-# golang.org/x/term v0.42.0
+# golang.org/x/term v0.44.0
 ## explicit; go 1.25.0
 golang.org/x/term
-# golang.org/x/text v0.36.0
+# golang.org/x/text v0.38.0
 ## explicit; go 1.25.0
 golang.org/x/text/encoding
 golang.org/x/text/encoding/charmap
@@ -413,7 +423,7 @@ golang.org/x/text/unicode/bidi
 # golang.org/x/time v0.15.0
 ## explicit; go 1.25.0
 golang.org/x/time/rate
-# golang.org/x/tools v0.44.0
+# golang.org/x/tools v0.47.0
 ## explicit; go 1.25.0
 golang.org/x/tools/go/ast/edge
 golang.org/x/tools/go/ast/inspector
@@ -434,10 +444,9 @@ golang.org/x/tools/internal/stdlib
 golang.org/x/tools/internal/typeparams
 golang.org/x/tools/internal/typesinternal
 golang.org/x/tools/internal/versions
-# gopkg.in/ini.v1 v1.67.1
+# gopkg.in/ini.v1 v1.67.3
 ## explicit; go 1.13
 gopkg.in/ini.v1
 # gopkg.in/yaml.v3 v3.0.1
 ## explicit
 gopkg.in/yaml.v3
-# fyne.io/fyne/v2 => github.com/alexballas/fyne/v2 v2.3.3-0.20260214003640-c68aed308565

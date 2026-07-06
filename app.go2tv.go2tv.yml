@@ -16,11 +16,9 @@ command: go2tv
 finish-args:
   - --share=ipc
   - --share=network
-  - --socket=x11
+  - --socket=wayland
+  - --socket=fallback-x11
   - --device=dri
-  - --filesystem=xdg-music:ro
-  - --filesystem=xdg-videos:ro
-  - --filesystem=xdg-download:ro
 
 build-options:
   env:
@@ -40,5 +38,5 @@ modules:
     sources:
       - type: git
         url: "https://github.com/alexballas/go2tv"
-        commit: f0bd9062f0e440649a1a9456a41aa7891ef7c340
+        commit: bbfb7c9094c9959ebb75c90a50c7584d7a70086f
       - go.mod.yml
