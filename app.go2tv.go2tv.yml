@@ -19,6 +19,7 @@ finish-args:
   - --socket=wayland
   - --socket=fallback-x11
   - --device=dri
+  - --filesystem=xdg-run/pipewire-0
 
 build-options:
   env:
@@ -29,7 +30,7 @@ modules:
   - name: go2tv
     buildsystem: simple
     build-commands:
-      - $GOROOT/bin/go build -tags "migrated_fynedo flatpak" -trimpath -ldflags="-s -w -X main.version=$(cat version.txt)" -o go2tv cmd/go2tv/go2tv.go
+      - $GOROOT/bin/go build -tags "migrated_fynedo flatpak" -trimpath -ldflags="-s -w -X main.version=$(cat version.txt)" -o go2tv ./cmd/go2tv
       - install -Dm00755 go2tv $FLATPAK_DEST/bin/go2tv
       - install -Dm00644 assets/linux/$FLATPAK_ID.desktop $FLATPAK_DEST/share/applications/$FLATPAK_ID.desktop
       - install -Dm00644 assets/linux/$FLATPAK_ID.appdata.xml $FLATPAK_DEST/share/appdata/$FLATPAK_ID.appdata.xml
@@ -38,5 +39,5 @@ modules:
     sources:
       - type: git
         url: "https://github.com/alexballas/go2tv"
-        commit: bbfb7c9094c9959ebb75c90a50c7584d7a70086f
+        commit: eac8f79629f794ee4c75312304db912391206cc0
       - go.mod.yml
