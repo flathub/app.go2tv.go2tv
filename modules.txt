@@ -7,7 +7,7 @@ fyne.io/systray/internal/generated/notifier
 ## explicit; go 1.18
 github.com/BurntSushi/toml
 github.com/BurntSushi/toml/internal
-# github.com/alexballas/fyne-tooltip v0.0.0-20260528093432-da161b5c8cac
+# github.com/alexballas/fyne-tooltip v0.0.0-20260907194307-bfdbb9024bac
 ## explicit; go 1.21
 github.com/alexballas/fyne-tooltip
 github.com/alexballas/fyne-tooltip/internal
@@ -18,7 +18,18 @@ github.com/alexballas/fyne-tooltip/widget
 github.com/alexballas/go-ssdp
 github.com/alexballas/go-ssdp/internal/multicast
 github.com/alexballas/go-ssdp/internal/ssdplog
-# github.com/alexballas/refyne/v2 v2.8.103
+# github.com/alexballas/portal v0.5.0
+## explicit; go 1.19
+github.com/alexballas/portal
+github.com/alexballas/portal/filechooser
+github.com/alexballas/portal/internal/apis
+github.com/alexballas/portal/internal/convert
+github.com/alexballas/portal/internal/request
+github.com/alexballas/portal/notification
+github.com/alexballas/portal/openuri
+github.com/alexballas/portal/settings
+github.com/alexballas/portal/settings/appearance
+# github.com/alexballas/refyne/v2 v2.8.107-0.20260907171104-59203c1293e8
 ## explicit; go 1.19
 github.com/alexballas/refyne/v2
 github.com/alexballas/refyne/v2/app
@@ -93,7 +104,7 @@ github.com/alexballas/tunetag/id3v2
 github.com/alexballas/tunetag/mp4
 github.com/alexballas/tunetag/ogg
 github.com/alexballas/tunetag/wav
-# github.com/alexballas/xfilepicker v0.0.0-20260722221937-2760d0132b88
+# github.com/alexballas/xfilepicker v0.0.0-20260903230936-5f9afb2d2f48
 ## explicit; go 1.25.0
 github.com/alexballas/xfilepicker/dialog
 # github.com/anthonynsimon/bild v0.17.0
@@ -139,9 +150,6 @@ github.com/davecgh/go-spew/spew
 # github.com/erikgeiser/coninput v0.0.0-20211004153227-1c3628e74d0f
 ## explicit; go 1.16
 github.com/erikgeiser/coninput
-# github.com/fredbi/uri v1.1.1
-## explicit; go 1.19
-github.com/fredbi/uri
 # github.com/fsnotify/fsnotify v1.10.1
 ## explicit; go 1.23
 github.com/fsnotify/fsnotify
@@ -321,17 +329,6 @@ github.com/pmezard/go-difflib/difflib
 # github.com/rivo/uniseg v0.4.7
 ## explicit; go 1.18
 github.com/rivo/uniseg
-# github.com/rymdport/portal v0.4.2
-## explicit; go 1.19
-github.com/rymdport/portal
-github.com/rymdport/portal/filechooser
-github.com/rymdport/portal/internal/apis
-github.com/rymdport/portal/internal/convert
-github.com/rymdport/portal/internal/request
-github.com/rymdport/portal/notification
-github.com/rymdport/portal/openuri
-github.com/rymdport/portal/settings
-github.com/rymdport/portal/settings/appearance
 # github.com/saintfish/chardet v0.0.0-20230101081208-5e3ef4b5456d
 ## explicit
 github.com/saintfish/chardet
@@ -359,8 +356,8 @@ github.com/stretchr/testify/require
 # github.com/xo/terminfo v0.0.0-20220910002029-abceb7e1c41e
 ## explicit; go 1.19
 github.com/xo/terminfo
-# github.com/yeqown/go-qrcode/v2 v2.2.5
-## explicit; go 1.18
+# github.com/yeqown/go-qrcode/v2 v2.3.0
+## explicit; go 1.19
 github.com/yeqown/go-qrcode/v2
 # github.com/yeqown/reedsolomon v1.0.0
 ## explicit
@@ -377,17 +374,19 @@ github.com/yuin/goldmark/renderer
 github.com/yuin/goldmark/renderer/html
 github.com/yuin/goldmark/text
 github.com/yuin/goldmark/util
-# go2tv.app/screencast v0.0.0-20260803165437-13b34d812adc
+# go2tv.app/screencast v0.0.0-20260807191623-4cba6136251a
 ## explicit; go 1.25
 go2tv.app/screencast/capture
 go2tv.app/screencast/hls
 go2tv.app/screencast/internal/apis
 go2tv.app/screencast/internal/convert
+go2tv.app/screencast/internal/pipeline
 go2tv.app/screencast/internal/pipewire
 go2tv.app/screencast/internal/processutil
 go2tv.app/screencast/internal/request
 go2tv.app/screencast/internal/session
 go2tv.app/screencast/internal/xdgportal
+go2tv.app/screencast/ts
 # golang.org/x/image v0.44.0
 ## explicit; go 1.25.0
 golang.org/x/image/ccitt
