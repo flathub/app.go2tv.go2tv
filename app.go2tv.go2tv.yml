@@ -5,12 +5,6 @@ sdk: org.freedesktop.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.golang
 
-add-extensions:
-  org.freedesktop.Platform.ffmpeg-full:
-    version: '25.08'
-    directory: lib/ffmpeg
-    add-ld-path: .
-
 command: go2tv
 
 finish-args:
@@ -23,10 +17,129 @@ finish-args:
 
 build-options:
   env:
-    - GOBIN=/app/bin
-    - GOROOT=/usr/lib/sdk/golang
+    GOBIN: /app/bin
+    GOROOT: /usr/lib/sdk/golang
 
 modules:
+  - name: nv-codec-headers
+    buildsystem: simple
+    build-commands:
+      - make PREFIX=${FLATPAK_DEST} LIBDIR=lib install
+    post-install:
+      - install -d ${FLATPAK_DEST}/share/licenses/${FLATPAK_ID}/nv-codec-headers
+      - |
+        for header in include/ffnvcodec/*.h; do
+          sed -n '1,/^ \*\//p' "$header" > "${FLATPAK_DEST}/share/licenses/${FLATPAK_ID}/nv-codec-headers/$(basename "$header").txt"
+        done
+    cleanup:
+      - /include
+      - /lib/pkgconfig
+    sources:
+      - type: git
+        url: https://github.com/FFmpeg/nv-codec-headers.git
+        tag: n13.0.19.1
+        commit: 88fee5c37318c991a8762d423530f91681e32e3a
+        x-checker-data:
+          type: git
+          tag-pattern: '^n(13\.0\.\d+\.\d+)$'
+
+  - name: x264
+    buildsystem: autotools
+    no-autogen: true
+    config-opts:
+      - --enable-static
+      - --disable-cli
+      - --disable-opencl
+      - --enable-pic
+    license-files:
+      - COPYING
+    cleanup:
+      - /include
+      - /lib/*.a
+      - /lib/pkgconfig
+    sources:
+      - type: git
+        url: https://code.videolan.org/videolan/x264.git
+        commit: b35605ace3ddf7c1a5d67a2eb553f034aef41d55
+
+  - name: libass
+    buildsystem: autotools
+    config-opts:
+      - --disable-shared
+      - --enable-static
+    license-files:
+      - COPYING
+    cleanup:
+      - /include
+      - /lib/*.a
+      - /lib/*.la
+      - /lib/pkgconfig
+    sources:
+      - type: archive
+        url: https://github.com/libass/libass/releases/download/0.17.4/libass-0.17.4.tar.xz
+        sha256: 78f1179b838d025e9c26e8fef33f8092f65611444ffa1bfc0cfac6a33511a05a
+        x-checker-data:
+          type: json
+          url: https://api.github.com/repos/libass/libass/releases/latest
+          version-query: .tag_name
+          url-query: .assets[] | select(.name == "libass-" + $version + ".tar.xz") | .browser_download_url
+
+  - name: ffmpeg
+    buildsystem: autotools
+    no-autogen: true
+    config-opts:
+      - --disable-shared
+      - --enable-static
+      - --disable-doc
+      - --disable-debug
+      - --disable-ffplay
+      - --disable-autodetect
+      - --enable-gpl
+      - --enable-libx264
+      - --enable-libass
+      - --enable-ffnvcodec
+      - --enable-nvenc
+      - --enable-nvdec
+      - --enable-cuvid
+      - --enable-vaapi
+      - --enable-libdrm
+      - --enable-gnutls
+      - --enable-libfontconfig
+      - --enable-libfreetype
+      - --enable-libfribidi
+      - --enable-libharfbuzz
+      - --enable-libmp3lame
+      - --enable-libopus
+      - --enable-libvorbis
+      - --enable-libvpx
+      - --enable-libdav1d
+      - --enable-libaom
+      - --enable-libwebp
+      - --enable-libpulse
+      - --enable-libxcb
+      - --enable-libxml2
+      - --enable-iconv
+      - --enable-zlib
+      - --enable-bzlib
+      - --enable-lzma
+    license-files:
+      - COPYING.GPLv2
+      - COPYING.LGPLv2.1
+    cleanup:
+      - /include
+      - /lib/*.a
+      - /lib/pkgconfig
+      - /share/ffmpeg
+    sources:
+      - type: archive
+        url: https://ffmpeg.org/releases/ffmpeg-8.1.2.tar.xz
+        sha256: 464beb5e7bf0c311e68b45ae2f04e9cc2af88851abb4082231742a74d97b524c
+        x-checker-data:
+          type: html
+          url: https://ffmpeg.org/releases/
+          version-pattern: 'ffmpeg-(8\.1\.\d+)\.tar\.xz'
+          url-template: https://ffmpeg.org/releases/ffmpeg-$version.tar.xz
+
   - name: go2tv
     buildsystem: simple
     build-commands:
@@ -35,7 +148,6 @@ modules:
       - install -Dm00644 assets/linux/$FLATPAK_ID.desktop $FLATPAK_DEST/share/applications/$FLATPAK_ID.desktop
       - install -Dm00644 assets/linux/$FLATPAK_ID.appdata.xml $FLATPAK_DEST/share/appdata/$FLATPAK_ID.appdata.xml
       - install -Dm00644 assets/go2tv-icon-desktop-512.png $FLATPAK_DEST/share/icons/hicolor/512x512/apps/$FLATPAK_ID.png
-      - mkdir -p ${FLATPAK_DEST}/lib/ffmpeg
     sources:
       - type: git
         url: "https://github.com/alexballas/go2tv"
