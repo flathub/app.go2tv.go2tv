@@ -1,6 +1,6 @@
 app-id: app.go2tv.go2tv
 runtime: org.freedesktop.Platform
-runtime-version: &runtime-version "25.08"
+runtime-version: &runtime-version '25.08'
 sdk: org.freedesktop.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.golang
@@ -41,7 +41,7 @@ modules:
         commit: 88fee5c37318c991a8762d423530f91681e32e3a
         x-checker-data:
           type: git
-          tag-pattern: '^n(13\.0\.\d+\.\d+)$'
+          tag-pattern: ^n(13\.0\.\d+\.\d+)$
 
   - name: x264
     buildsystem: autotools
@@ -76,13 +76,14 @@ modules:
       - /lib/pkgconfig
     sources:
       - type: archive
-        url: https://github.com/libass/libass/releases/download/0.17.4/libass-0.17.4.tar.xz
-        sha256: 78f1179b838d025e9c26e8fef33f8092f65611444ffa1bfc0cfac6a33511a05a
+        url: https://github.com/libass/libass/releases/download/0.17.5/libass-0.17.5.tar.xz
+        sha256: 2dca25c0e0c837ddf00b52011b3f82cac1e4ddd3ad018227806b0c2288864acc
         x-checker-data:
           type: json
           url: https://api.github.com/repos/libass/libass/releases/latest
           version-query: .tag_name
-          url-query: .assets[] | select(.name == "libass-" + $version + ".tar.xz") | .browser_download_url
+          url-query: .assets[] | select(.name == "libass-" + $version + ".tar.xz")
+            | .browser_download_url
 
   - name: ffmpeg
     buildsystem: autotools
@@ -132,24 +133,25 @@ modules:
       - /share/ffmpeg
     sources:
       - type: archive
-        url: https://ffmpeg.org/releases/ffmpeg-8.1.2.tar.xz
-        sha256: 464beb5e7bf0c311e68b45ae2f04e9cc2af88851abb4082231742a74d97b524c
+        url: https://ffmpeg.org/releases/ffmpeg-8.1.3.tar.xz
+        sha256: 7138d28c96d9d3e3af4ee3d8cad72741f8ffb40da90c1112235dea3ecd3178a3
         x-checker-data:
           type: html
           url: https://ffmpeg.org/releases/
-          version-pattern: 'ffmpeg-(8\.1\.\d+)\.tar\.xz'
+          version-pattern: ffmpeg-(8\.1\.\d+)\.tar\.xz
           url-template: https://ffmpeg.org/releases/ffmpeg-$version.tar.xz
 
   - name: go2tv
     buildsystem: simple
     build-commands:
-      - $GOROOT/bin/go build -tags "migrated_fynedo flatpak" -trimpath -ldflags="-s -w -X main.version=$(cat version.txt)" -o go2tv ./cmd/go2tv
+      - $GOROOT/bin/go build -tags "migrated_fynedo flatpak" -trimpath -ldflags="-s
+        -w -X main.version=$(cat version.txt)" -o go2tv ./cmd/go2tv
       - install -Dm00755 go2tv $FLATPAK_DEST/bin/go2tv
       - install -Dm00644 assets/linux/$FLATPAK_ID.desktop $FLATPAK_DEST/share/applications/$FLATPAK_ID.desktop
       - install -Dm00644 assets/linux/$FLATPAK_ID.appdata.xml $FLATPAK_DEST/share/appdata/$FLATPAK_ID.appdata.xml
       - install -Dm00644 assets/go2tv-icon-desktop-512.png $FLATPAK_DEST/share/icons/hicolor/512x512/apps/$FLATPAK_ID.png
     sources:
       - type: git
-        url: "https://github.com/alexballas/go2tv"
+        url: https://github.com/alexballas/go2tv
         commit: b0815e854e5ecaf73ae68e4fba6bf1c9f262ead8
       - go.mod.yml
