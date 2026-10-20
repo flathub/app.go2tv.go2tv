@@ -153,5 +153,5 @@ modules:
     sources:
       - type: git
         url: https://github.com/alexballas/go2tv
-        commit: b0815e854e5ecaf73ae68e4fba6bf1c9f262ead8
+        commit: 341c178bfbaf11bbf1f011b77dc6e00f2ba77991
       - go.mod.yml
